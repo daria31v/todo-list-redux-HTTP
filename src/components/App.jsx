@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector} from 'react-redux';
 import { fetchTasks } from 'redux/operations';
 import { selectError, selectIsLoading } from 'redux/selectors';
-
+import css from './App.module.css'
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ export const App = () => {
 
   
   return (
-         <Layout>
+         <Layout className={css.body}>
         <AppBar />
         <TaskForm />
         {isLoading && !error && <b>Please wait request in progress...</b>}
