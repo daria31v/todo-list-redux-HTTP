@@ -18,6 +18,7 @@ const tasksSlice = createSlice({
     items: [],
     isLoading: false,
     error: null,
+    
   },
     extraReducers: {
       [fetchTasks.pending]: handlePending,
@@ -53,6 +54,7 @@ const tasksSlice = createSlice({
         state.items.splice(index, 1, action.payload);
       },
     },
+    
   },
 );
 
